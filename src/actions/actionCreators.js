@@ -12,7 +12,7 @@ export const fetchPost = () => (dispatch) => {
 };
 
 export const createPost = (postData) => (dispatch) => { 
-  fetch(origin + "api/members", {
+  fetch(origin + "/api/members", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
