@@ -1,7 +1,8 @@
 import { FETCH_POSTS, NEW_POSTS} from './types.js';
 
-export const fetchPost = () => (dispatch) => { 
-        fetch("http://localhost:5000/api/members")
+export const fetchPost = () => (dispatch) => {
+  let origin = window.location.origin;
+        fetch(origin + "/api/members")
       .then(res => res.json())
       .then(data => {
           dispatch({
@@ -11,7 +12,7 @@ export const fetchPost = () => (dispatch) => {
 };
 
 export const createPost = (postData) => (dispatch) => { 
-  fetch("http://localhost:5000/api/members", {
+  fetch(origin + "api/members", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
