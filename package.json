@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "webpack": "webpack --config webpack.config.js --bail",
-    "build": "npm run webpack && node server.js",
+    "build": "node server.js",
     "watch": "webpack --config webpack.config.js -w",
     "prettier": "prettier --check ."
   },
