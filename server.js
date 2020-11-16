@@ -54,4 +54,4 @@ app.use("/api/members", require("./routes/api/members"));
 app.use(express.static(path.join(__dirname)));
 
 const PORT = process.env.PORT || 5001;
-app.listen(PORT, () => console.log(`Server is running on ${PORT}`));
+app.listen(PORT, () => console.log(`HI! Server is running on ${PORT}`));
