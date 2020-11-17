@@ -14,7 +14,7 @@ module.exports = {
 				comments: false
 			}
 		}
-	});
+	}),
     mode: 'development',
     entry: path.join(__dirname, 'index.js'),
     output: {
