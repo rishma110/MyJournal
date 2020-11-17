@@ -4,6 +4,7 @@ const CompressionPlugin = require('compression-webpack-plugin');
 const DEV = process.env.NODE_ENV !== 'production';
 
 module.exports = {
+    optimization: {
     minimizer: DEV? [] : new UglifyJSPlugin({
 		sourceMap: true,
 		uglifyOptions: {
@@ -14,7 +15,7 @@ module.exports = {
 				comments: false
 			}
 		}
-	}),
+	})},
     mode: 'development',
     entry: path.join(__dirname, 'index.js'),
     output: {
