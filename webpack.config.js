@@ -16,7 +16,7 @@ module.exports = {
 			}
 		}
 	})},
-    mode: 'development',
+    mode: DEV ? 'development' : 'production',
     entry: path.join(__dirname, 'index.js'),
     output: {
         filename: 'app.js',
